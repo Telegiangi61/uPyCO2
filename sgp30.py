@@ -1,3 +1,15 @@
+# Copyright 2020 LeMaRiva|Tech (Mauro Riva) info@lemariva.com
+# https://github.com/lemariva/uPyCO2
+#
+# Library modified by Gian Luigi Perrella 
+# 
+# https://github.com/Telegiangi61/uPyCO2
+# 
+# added:
+# 1) reading of raw_H2 and raw_Ethanol
+# 2) reading sensor serial id, i2c address and featureset
+# 
+
 import time
 from micropython import const
 
@@ -23,6 +35,12 @@ class SGP30:
         featureset = self._i2c_read_words_from_cmd([0x20, 0x2f], 1, 0.01)
         if featureset[0] != _SGP30_FEATURESET:
             raise RuntimeError('SGP30 Not detected')
+        print(
+            "SGP30 sensor discovered...\n" +
+            "I2C address: " + str(self._addr) + "\n" +
+            "Serial ID: " + str(self.serial) + "\n" +
+            "Feature set: " + str(featureset) + "\n"
+        )
         self.initialise_indoor_air_quality()
 
     @property
@@ -45,6 +63,17 @@ class SGP30:
         """Carbon Dioxide Equivalent baseline value"""
         return self.indoor_air_quality_baseline[0]
 
+    @property
+    def raw_h2(self):
+        """Total Volatile Organic Compound in parts per billion."""
+        return self.raw_air_quality[0]
+    
+    @property
+    def raw_ethanol(self):
+        """Total Volatile Organic Compound in parts per billion."""
+        return self.raw_air_quality[1]
+
+
     def initialise_indoor_air_quality(self):
         """Initialize the IAQ algorithm"""
         # name, command, signals, delay
@@ -55,6 +84,12 @@ class SGP30:
         """Measure the CO2eq and TVOC"""
         # name, command, signals, delay
         return self._i2c_read_words_from_cmd(command=[0x20, 0x08], reply_size=2, delay=0.05)
+    
+    @property
+    def raw_air_quality(self):
+        """Measure the raw H2 and ETHANOL values for sensor testing"""
+        # name, command, signals, delay
+        return self._i2c_read_words_from_cmd(command=[0x20, 0x50], reply_size=2, delay=0.05)
 
     @property
     def indoor_air_quality_baseline(self):
