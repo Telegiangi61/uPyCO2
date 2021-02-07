@@ -1,6 +1,9 @@
 ## uPyCO2  - M5 Fresh Air TVOC Monitor
 This repository is a fork of Lemariva's uPyCO2,  has the code that helps you to build DIY CO2 measuring devices for M5Stack Cores and, later, via MQTT towards Openhab, Node-red, Home Assistnt and similar framework. The measurements can be an aid for Covid-19 prevention. The idea is that if there is a lot of exhaled CO2 in the air, there are also a lot of aerosols in the air. These smallest particles, to which Sars-CoV-2 viruses from the respiratory tract attach themselves, can float in the room air and can spread over several meters. A high concentration of aerosols increases the risk for everyone else in the room to become infected.
 
+you have to copy sgp30.py on /flash of M5stack and freshair.py on /flash/apps 
+Thonny IDE is recommended for this purpose
+
 |           | 
 |:---------:|
 |![M5 FRESH AIR MONITOR](https://www.themaker.it/wp-content/uploads/2021/02/fotofreshair-300x259.jpg)|
