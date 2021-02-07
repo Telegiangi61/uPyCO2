@@ -7,6 +7,11 @@ From Lemariva's work, you can find more information on how to use the files in t
 * [M5Stack: Widgets on your Smartphone help to stay safe from #COVID-19](https://lemariva.com/blog/default/default/m5stack-widgets-your-smartphone-help-stay-safe-covid-19)
 * [iOS Scriptable Widget](https://gist.github.com/lemariva/4d52b8cb43ff4571a38b883bf452bea6)
 
+|           | 
+|:---------:|
+|![M5 FRESH AIR MONITOR](https://www.themaker.it/wp-content/uploads/2021/02/fotofreshair-300x259.jpg)|
+|M5 FRESH AIR MONITOR|
+
 
 ## License
 Apache 2.0
