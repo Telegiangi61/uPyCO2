@@ -6,6 +6,11 @@ This repository is a fork of Lemariva's uPyCO2,  has the code that helps you to 
 |![M5 FRESH AIR MONITOR](https://www.themaker.it/wp-content/uploads/2021/02/fotofreshair-300x259.jpg)|
 |M5 FRESH AIR MONITOR|
 
+|           | 
+|:---------:|
+|![M5 FRESH AIR MONITOR](https://www.themaker.it/wp-content/uploads/2021/02/20210207_230502-300x146.jpg)|
+|M5 FRESH AIR MONITOR|
+
 From Lemariva's work, you can find more information on how to use the files in the following tutorials:
 * [M5Stack: Fresh air checker helps you to stay safe from #COVID-19](https://lemariva.com/blog/2020/11/m5stack-fresh-air-helps-stay-safe-from-covid-19)
 * [Nginx: Docker, Flask and Let's Encrypt (SSL)](https://lemariva.com/blog/2020/11/nginx-docker-flask-and-lets-encrypt-ssl)
