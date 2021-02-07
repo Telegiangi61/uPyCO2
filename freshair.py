@@ -14,8 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 * Modified by Gian Luigi Perrella for M5Stack UI port.
-added raw reading values of H2 and Ethanol
+1) corrected sequence reading pair of values: eco2, tvoc = sgp30.indoor_air_quality
+2) added raw reading values of H2 and Ethanol
+3) added UI objects to display sensor values on a M5Stack Core
 to do sending data via MQTT towards Openhab
+
 """
 
 from m5stack import *
